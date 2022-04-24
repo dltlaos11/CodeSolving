@@ -10,3 +10,5 @@ for i in range(num):
             result-=1
             break
 print(result)
+
+# 안ㄴ영
