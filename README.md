@@ -1,2 +1,2 @@
-# baekjoon
-뺵준 풀기
+# CodeSolving
+코테 준비하기
