@@ -1,0 +1,18 @@
+function solution(cacheSize, cities) {
+    const cache=[];
+    var answer = 0;
+    for(let i=0;i<cities.length;i+=1){
+        cities[i]=cities[i].toLowerCase();
+        const idx=cache.indexOf(cities[i]);
+        if(idx===-1){
+            answer+=5;
+        }else{
+            answer+=1;
+            cache.splice(idx,1);
+        }
+        cache.push(cities[i]);
+        if(cache.length>cacheSize)cache.shift();
+    }
+    
+    return answer;
+}
