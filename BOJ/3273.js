@@ -24,6 +24,8 @@ while(left != right) {
 }
 console.log(cnt);
 
+// 연속된 주소 메모리 크기가 주어진다 -> 배열
+
 // const path = './BOJ/input.txt' // 제출시 삭제 
 
 // const readline = require('readline')
