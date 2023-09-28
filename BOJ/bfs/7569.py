@@ -42,4 +42,4 @@ for i in range(h):
                 print(-1)
                 exit(0)
             res = max(res, graph[i][j][k])
-print(res-1)
+print(res-1) 
