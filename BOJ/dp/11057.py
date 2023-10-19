@@ -3,7 +3,7 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-dp = [1]*10 # 맨 뒷자리 수 가 0일 떄 는 모든 수의 길이가 1 (0)
+dp = [1]*10 # n이 1자릿 수 일 떄 dp 세팅
 for i in range(1,n) : # 수의 길이 1 ~9
     for j in range(1,10) : # 맨 뒷자리
 
