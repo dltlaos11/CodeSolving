@@ -33,3 +33,48 @@ for test_case in range(1, T + 1):
     print(f'#{test_case}')
     for row in sqr:
         print(*row)
+
+# --------------------------------2
+T = int(input())
+
+dr = [0, 1, 0, -1]
+dc = [1, 0, -1, 0]
+
+for i in range(T, T+1):
+
+    snail = int(input())
+
+    graph = [[0] * snail for _ in range(snail)]
+    # graph = [[1] * snail for _ in range(snail)]
+
+    dist = 0
+    # dist = [0,1,2,3]
+
+    r = 0
+    c = 0
+
+    for j in range(1, snail*snail+1):
+
+        graph[r][c] = j
+        # graph[dr[dist]+r][dc[dist]+c] = j
+
+        r += dr[dist]
+        c += dc[dist]
+        # r += dr[dist] + 1
+        # c += dc[dist] + 1
+        # r += 1
+        # c += 1
+
+        if r < 0 or c < 0 or r >= snail or c >= snail or graph[r][c] != 0:
+            r -= dr[dist]
+            c -= dc[dist]
+            # r -= 1
+            # c -= 1
+
+            dist = (dist+1) % 4
+            # dist += (dist+1) % 4
+
+            r += dr[dist]
+            c += dc[dist]
+
+    print(graph)
