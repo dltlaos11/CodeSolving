@@ -19,6 +19,9 @@ def solution(phone_book):
                 return answer
         
     return answer
+
+# 정렬로 풀기, [i+1][:len(cur)]
+
 # 한 번호가 다른 번호의 접두어인 경우가 있는지 확인하려 합니다.
 # 구조대 전화번호는 영석이의 전화번호의 접두사
 # 구조대 : 119
