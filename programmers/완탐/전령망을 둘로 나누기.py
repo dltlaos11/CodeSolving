@@ -20,11 +20,11 @@ def solution(n, wires):
                     cnt += 1
         return cnt
             
-    res = n
+    res = n # n-2
     for a,b in wires:
-        graph[a].remove(b) # 짜르기
+        graph[a].remove(b) # 짜르기 # copy.deepcopy 🥲
         graph[b].remove(a)
-        res = min(abs(bfs(a) - bfs(b)), res)
+        res = min(abs(bfs(a) - bfs(b)), res) # 하나돌고 뺴 이 자식아
         
         # 원점
         graph[a].append(b)
